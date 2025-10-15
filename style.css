@@ -1,0 +1,72 @@
+:root {
+  --bg1:#fff3e4; --bg2:#fcd2b6;
+  --card:#ffffffcc;
+  --accent1:#7c3aed; --accent2:#06b6d4;
+  --text:#052934; --muted:#5b6b6b;
+  --radius:14px; --shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif;}
+body{
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  color:var(--text);
+  line-height:1.6;
+}
+.wrap{max-width:1000px;margin:40px auto;padding:16px;}
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:20px;
+}
+h1,h2,h3{margin-bottom:8px;}
+a{text-decoration:none;color:inherit;}
+/* HEADER */
+.header{
+  display:flex;align-items:center;gap:20px;margin-bottom:20px;flex-wrap:wrap;
+}
+.header img{
+  width:120px;height:120px;border-radius:12px;object-fit:cover;
+}
+.header-info h1{font-size:26px;}
+.header-info p{color:var(--muted);}
+.social{
+  display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;
+}
+.social a{
+  display:flex;align-items:center;gap:8px;
+  padding:8px 14px;background:rgba(255,255,255,0.7);
+  border-radius:10px;font-weight:600;
+  transition:.3s;
+}
+.social a:hover{background:white;transform:translateY(-2px);}
+.social img{width:20px;height:20px;}
+/* HERO */
+.hero{
+  display:flex;flex-wrap:wrap;gap:18px;margin-top:20px;
+}
+.hero .left{flex:1;}
+.hero .right{width:250px;}
+.badge{
+  display:inline-block;background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  color:white;padding:6px 12px;border-radius:999px;font-weight:600;
+}
+.btn{
+  display:inline-block;
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  color:white;padding:10px 16px;border-radius:10px;font-weight:600;
+  box-shadow:0 6px 16px rgba(124,58,237,0.15);
+  transition:.3s;
+}
+.btn:hover{transform:translateY(-2px);}
+.skill{
+  background:rgba(255,255,255,0.8);padding:8px 12px;border-radius:10px;
+  font-weight:600;text-align:center;
+}
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+/* PROJECTS */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:14px;}
+.project{background:rgba(255,255,255,0.9);padding:16px;border-radius:12px;transition:.3s;}
+.project:hover{transform:translateY(-6px);box-shadow:0 10px 25px rgba(0,0,0,0.08);}
+footer{text-align:center;color:var(--muted);margin-top:30px;font-size:14px;}
+@media(max-width:700px){.hero{flex-direction:column}.hero .right{width:100%;}}
+</style>
